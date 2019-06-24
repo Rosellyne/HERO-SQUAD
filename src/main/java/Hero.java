@@ -39,5 +39,6 @@ public class Hero {
         mSpecialPower =special_power;
         mWeakness = weakness;
         mId = instances.size();
+        instances.add(this);
     }
 }
