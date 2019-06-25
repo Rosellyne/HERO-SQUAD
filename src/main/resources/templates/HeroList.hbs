@@ -1,0 +1,21 @@
+{{#partial "content"}}
+
+    <h1> Heroes</h1>
+    {{#if heroes}}
+        {{# each heroes}}
+            <div class ="hero-list">
+                <p>Hero Name:<span>{{name}}</span></p>
+                <p>Hero Age:<span>{{age}}</span></p>
+                <p>Hero Cause:<span>{{power}}</span></p>
+                <p>Hero Cause:<span>{{weakness}}</span></p>
+
+                <a href="new/{{id}}">Read More </a>
+            </div>
+        {{/each}}
+
+    {{else}}
+        <p> No Heroes yet!</p>
+    {{/if}}
+
+{{/partial}}
+{{>layout.hbs}}

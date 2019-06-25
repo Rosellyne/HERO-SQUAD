@@ -1,12 +1,15 @@
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
+
 
 import static javax.swing.UIManager.get;
-import static spark.Spark.post;
 import static spark.Spark.staticFileLocation;
+import static spark.route.HttpMethod.get;
 
 public class App {
 
@@ -14,21 +17,24 @@ public class App {
 
         staticFileLocation("/public");
 
-        
-        post("/squad", (request, response) -> { //URL to make new post on POST route
+        get("/", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
-
-            String content = request.queryParams("content");
-            Post newSquad = new Post(content);
-            model.put("post", newPost);
-            return new ModelAndView(model, "success.hbs");
+            return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
+
+
+        get("/hero- form", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "Hero-form.hbs");
+        }, new HandlebarsTemplateEngine());
+
+
+        get("/squad- form", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "Squad-form.hbs");
+        }, new HandlebarsTemplateEngine());
+
+
     }
 
-    get("/squad", (req, res) -> {
-        Map<String, Object> model = new HashMap<>();
-        return new ModelAndView(model, "newpost-form.hbs");
-    }, new HandlebarsTemplateEngine());
-
-
-}
+    }
