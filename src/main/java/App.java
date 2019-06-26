@@ -66,8 +66,6 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             int squadId =Integer.parseInt(req.params(":id"));
            Squad newSquad =Squad.find(squadId);
-           System.out.println("------------------"+ newSquad.getName());
-//           model.put("thisSquad",newSquad);
             model.put("squad-name", newSquad.getName());
             model.put("squad-size", newSquad.getName());
             model.put("squad-cause", newSquad.getName());
