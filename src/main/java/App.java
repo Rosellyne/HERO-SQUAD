@@ -55,14 +55,22 @@ public class App {
             int newSize = Integer.parseInt(req.queryParams("squad-size"));
             String newCause=req.queryParams("squad-cause");
             Squad newSquad = new Squad(newName,newSize,newCause);
+            int SquadId=newSquad.getId();
+            model.put("id",SquadId);
             return new ModelAndView(model,"success1.hbs");
 
         },new HandlebarsTemplateEngine());
 
-        get("/squads",(req,res)->{
+
+        get("/squad/details/:id",(req,res)->{
             Map<String, Object> model = new HashMap<>();
-            ArrayList<Squad> squads=Squad.getAll();
-            model.put("squads",squads);
+            int squadId =Integer.parseInt(req.params(":id"));
+           Squad newSquad =Squad.find(squadId);
+           System.out.println("------------------"+ newSquad.getName());
+//           model.put("thisSquad",newSquad);
+            model.put("squad-name", newSquad.getName());
+            model.put("squad-size", newSquad.getName());
+            model.put("squad-cause", newSquad.getName());
             return new ModelAndView(model, "SquadLst.hbs");
         }, new HandlebarsTemplateEngine());
 

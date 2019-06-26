@@ -1,6 +1,6 @@
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class Hero {
     private String name;
@@ -52,9 +52,9 @@ public class Hero {
     public static void clear(){
         instances.clear();
     }
-//    public static void find(int id){
-//        return instances.get(id-1);
-//    }
+    public static Hero find(int id){
+        return instances.get(id-1);
+    }
     public static void remove(int id){
         instances.remove(id-1);
     }

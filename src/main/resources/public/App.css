@@ -1,4 +1,4 @@
-.home-header>h1{
+.h1{
 text-align:center;
 font-family: 'Times New Roman', Times, serif;
 margin-top:20px;
@@ -6,7 +6,6 @@ color:white;
 font-size: 3em;
 }
 .homeland{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHYPVdYCYZIA-MIJqgOMEvIWklQ-dwv0XuPcDMoLsRXO_e-dTXig);
     background-repeat: no-repeat;
     background-size: cover;
     height:100vh;
@@ -25,12 +24,12 @@ font-size: 3em;
 }
 .form1{
     padding-left: 20%;
-    margin-top:25%;
+    margin-top:10%;
     background-color: rgba(rgb(255, 255, 255,0.5))
 }
 .form1{
     padding-left: 20%;
-    margin-top:25%;
+    margin-top:10%;
     background-color: rgba(rgb(247, 242, 242,0.4))
 }
 /* .content{
