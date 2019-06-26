@@ -9,7 +9,6 @@ public class Hero {
     private String weakness;
     private static ArrayList<Hero> instances = new ArrayList<>();
     private int id;
-    private LocalDateTime createdAt;
 
     public Hero(String name, int age, String special_power, String weakness){
         this.name=name;
@@ -18,7 +17,6 @@ public class Hero {
         this.weakness = weakness;
         instances.add(this);
         this.id = instances.size();
-        this.createdAt=LocalDateTime.now();
     }
 
     public String getName() {
@@ -45,9 +43,6 @@ public class Hero {
     public int getAge() {
 
         return this.age;
-    }
-    public LocalDateTime getCreatedAt(){
-        return createdAt;
     }
     public static void clear(){
         instances.clear();
