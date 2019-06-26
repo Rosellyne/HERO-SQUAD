@@ -41,20 +41,12 @@ public class Squad {
 
         return MaxSize;
     }
-    public static void clear(){
-
-        instances.clear();
-    }
    public static  Squad find (int id){
 
         return instances.get(id-1);
    }
-    public static void remove(int id){
-        instances.remove(id-1);
-        for (Squad squad:instances){
-            squad.Id =instances.indexOf(squad)+1;
-        }
-    }
+
+
     public ArrayList<Hero>getHeros(){
 
         return Heros;

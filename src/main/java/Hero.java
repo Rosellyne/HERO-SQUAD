@@ -44,14 +44,8 @@ public class Hero {
 
         return this.age;
     }
-    public static void clear(){
-        instances.clear();
-    }
     public static Hero find(int id){
         return instances.get(id-1);
-    }
-    public static void remove(int id){
-        instances.remove(id-1);
     }
 
 

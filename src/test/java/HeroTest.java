@@ -35,41 +35,6 @@ public class HeroTest {
         assertEquals("Lying", myHero.getWeakness());
     }
 
-    @Test
-    public void getCreatedAt_instantiatesWithCurrentTime_today() {
-        Hero myHero = new Hero("Mary", 19, "Magician", "Lying");
-        assertEquals(LocalDateTime.now().getDayOfWeek(), myHero.getCreatedAt().getDayOfWeek());
-    }
 
-    @Test
-    public void clear_clearsAllInstancesOfHero_int() {
-        Hero.clear();
-        Hero myHero = new Hero("Mary", 19, "Magician", "Lying");
-        assertEquals(0, Hero.getAll().size());
 
-    }
-
-    @Test
-    public void getAll_ReturnsAllInstancesOfHero_true() {
-        Hero.clear();
-        Hero myHero = new Hero("Mary", 19, "Magician", "Lying");
-        assertTrue(Hero.getAll().contains(myHero));
-    }
-
-    @Test
-    public void getmId_instantiatesWithId_int() {
-        Hero.clear();
-        Hero myHero = new Hero("Mary", 19, "Magician", "Lying");
-        assertEquals(1, myHero.getId());
-
-    }
-
-    @Test
-    public void remove_removesHeroWithParticularId_false() {
-        Hero.clear();
-        Hero myHero = new Hero("Mary", 19, "Magician", "Lying");
-        Hero.remove(myHero.getId());
-        assertFalse( Hero.getAll().contains(myHero));
-
-    }
 }
