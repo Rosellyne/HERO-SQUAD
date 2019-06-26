@@ -1,15 +1,15 @@
 {{#partial "content"}}
-    <div class="">
+
 
     <h1> Heroes</h1>
     {{#if heroes}}
         {{#each heroes}}
             <div class ="hero-list">
-                <p>Hero Name:{{name}}</p>
+                <p>Hero Name:<span>{{name}}</span></p>
                 <p>Hero Age:<span>{{age}}</span></p>
-                <p>Hero Specialpower:<span>{{special_power}}</span></p>
-                <p>Hero Weakness:{{weakness}}</p>
-
+                <p>Hero Powers:<span>{{special_power}}</span></p>
+                <p>Hero Weakness:<span>{{weakness}}</span></p>
+                <div class="link">
                 <a href="/squad-form">Add a squad to the Hero </a>
             </div>
         {{/each}}

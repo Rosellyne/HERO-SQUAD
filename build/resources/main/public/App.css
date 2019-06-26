@@ -6,7 +6,7 @@ color:white;
 font-size: 3em;
 }
 .homeland{
-     background-image:Url"https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/05/Modern-Warfare-Reboot-796x417.jpg"
+     background-image:Url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/05/Modern-Warfare-Reboot-796x417.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height:100vh;
@@ -16,7 +16,8 @@ font-size: 3em;
 #home{
     background-color: blue;
     color:black;
-    margin-left: 20%;
+    margin-top:30%
+    margin-left:20%;
 }
 #header{
     background-color: blue;
@@ -28,13 +29,13 @@ font-size: 3em;
 .form-group{
     padding: 15px;
     margin-bottom:15px;
-    background-color: rgba(rgb(247, 242, 242,0.3))
-    text-align:center;
+      background-color:rgba(255,255,255,0.2);
+
     margin-left:20%
     box-sizing:border-box;
 }
 #nav{
-float:right
+float:left;
 margin-right:0px;
 margin-top:30px;
 
@@ -51,6 +52,28 @@ padding:15px;
 }
 span{
 font-weight:600;
-font-size:1.2em;
 color:white;
 }
+p{
+text-align:center;
+font-size:1.3em;
+color:white;
+margin-left:5px;
+}
+label{
+font-size:1.4em;
+color:white;
+
+}
+.link{
+text-align:center;
+font-size:1.3em;
+margin-left:5px;
+
+}
+.button-home{
+margin-top:5%;
+margin-left:35%
+
+}
+
