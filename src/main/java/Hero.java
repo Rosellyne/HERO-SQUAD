@@ -3,48 +3,60 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Hero {
-    private String mName;
-    private int mAge;
-    private String mSpecialPower;
-    private String mWeakness;
-    private static List<Hero> instances = new ArrayList<>();
-    private int mId;
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private String name;
+    private int age;
+    private String special_power;
+    private String weakness;
+    private static ArrayList<Hero> instances = new ArrayList<>();
+    private int id;
+    private LocalDateTime createdAt;
 
     public Hero(String name, int age, String special_power, String weakness){
-        mName=name;
-        mAge = age;
-        mSpecialPower =special_power;
-        mWeakness = weakness;
-        mId = instances.size();
+        this.name=name;
+        this.age = age;
+        this.special_power =special_power;
+        this.weakness = weakness;
         instances.add(this);
-        this
+        this.id = instances.size();
+        this.createdAt=LocalDateTime.now();
     }
 
-    public String getmName() {
-        return mName;
+    public String getName() {
+        return name;
     }
 
-    public int getmId() {
-        return mId;
+    public int getId() {
+        return id;
     }
 
-    public static List<Hero> getAll() {
+    public static ArrayList<Hero> getAll() {
         return instances;
     }
 
-    public String getmWeakness() {
+    public String getWeakness() {
 
-        return mWeakness;
+        return weakness;
     }
 
-    public String getmSpecialPower(){
-        return mSpecialPower;
+    public String getSpecialPower(){
+        return special_power;
     }
 
-    public int getmAge() {
+    public int getAge() {
 
-        return mAge;
+        return this.age;
+    }
+    public LocalDateTime getCreatedAt(){
+        return createdAt;
+    }
+    public static void clear(){
+        instances.clear();
+    }
+//    public static void find(int id){
+//        return instances.get(id-1);
+//    }
+    public static void remove(int id){
+        instances.remove(id-1);
     }
 
 

@@ -32,17 +32,66 @@ public class SquadTest {
         Squad mySquad = new Squad("Changers", 9, "Fighting");
         assertEquals(9, mySquad.getmMaxSize());
     }
+
     @Test
     public void Squad_instantiatesWithCause_String() {
         Squad mySquad = new Squad("Changers", 9, "Fighting");
         assertEquals("Fighting", mySquad.getmCause());
 
     }
-//    @Test
-//    public void Squad_returnsAllInstancesOfSquad_true() {
-//        Squad mySquad = new Squad("Changers", 9, "Fighting");
-//        assertEquals(true, Squad.all());
+
+    @Test
+    public void getAll_returnsAllInstancesOfSquad_true() {
+        Squad mySquad = new Squad("Changers", 9, "Fighting");
+        assertEquals(true, Squad.getAll().contains(mySquad));
 
     }
+    @Test
+    public void getId_instantiatesWithId_int() {
+        Squad.clear();
+        Squad mySquad = new Squad("Changers", 9, "Fighting");
+        assertEquals(1, mySquad.getmId());
+
+    }
+
+//    @Test
+//    public void find_returnsInstanceOfSquadWithParticularId_Squad() {
+//        Squad mySquad = new Squad("Changers", 9, "Fighting");
+//        assertEquals(mySquad, Squad.find(mySquad.getmId());
+//}
+    @Test
+    public void clear__clearsAllInstancesOfSquad_true() {
+        Squad.clear();
+        Squad mySquad = new Squad("Changers", 9, "Fighting");
+        assertEquals(0, Squad.getAll().size());
+
+    }
+    @Test
+    public void remove__removesAllInstancesOfSquad_true() {
+        Squad.clear();
+        Squad mySquad = new Squad("Changers", 9, "Fighting");
+        assertEquals(0, Squad.getAll().size());
+
+    }
+//    @Test
+//    public void remove__removesAParticularSquad_true() {
+//        Squad firstSquad = new Squad("Changers", 9, "Fighting");
+//        Squad SecondSquad = new Squad("Solvers", 5, "Worship");
+//        mySquad.addHero(Hero.find(myHero.getId()));
+//    }
+//    @Test
+//    public void addHeros__addsHeroInstanceToSquad_true() {
+//        Hero myHero = new Hero("Mary", 19, "Magician", "Lying");
+//        Squad mySquad = new Squad("Changers", 9, "Fighting");
+//        Squad.remove(firstSquad.getmId());
+//        assertTrue( Squad.getAll().contains(firstSquad));
+//    }
+
+
+
+
+
+}
+
 
 
